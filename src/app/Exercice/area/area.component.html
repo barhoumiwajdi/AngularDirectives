@@ -1,0 +1,22 @@
+<h2 class="text-center text-success">Partie 1 Challenge 1 </h2>
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <div class="col-10">
+
+            <form>
+                <div class="form-group">
+                    <label for="label1">Label 1 </label>
+                    <input type="number" class="form-control" [(ngModel)]="id1" placeholder="Enter numero"
+                        name="numero">
+                </div>
+
+
+                <button type="button" (click)="cercle()" class="btn btn-primary m-5">Calculer Cercle</button>
+                <button type="button" (click)="carre()" class="btn btn-primary m-5">Calculer Carré </button> <br>
+                le carre est {{resultat1}} <br>
+                le cercle est {{resultat2}}
+
+            </form>
+        </div>
+    </div>
+</div>

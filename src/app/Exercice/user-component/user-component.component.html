@@ -1,0 +1,44 @@
+<h2 class="text-center text-success"> Partie 2 Challenge</h2>
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <div class="col-10">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{name}}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{email}}</h6>
+                    <h6 class="card-subtitle mb-2 text-muted">{{address}}</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's
+                        content.</p>
+
+                    <ul *ngIf="display">
+                        <li *ngFor="let hobby of hobbies">
+                            {{hobby}}
+                        </li>
+                    </ul>
+                    <button type="button" class="btn btn-primary" (click)="Afficher()">Afficher Hobbies </button>
+                    <button type="button" class="btn btn-danger" (click)="supprimer()">supprimer Hobbies </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-10">
+            Editer <Form>
+                <label for="">Name:</label><input type="text" class="form-control" name="" [(ngModel)]="name"><br />
+                <label for="">email:</label><input type="email" class="form-control" name="" id=""
+                    [(ngModel)]="email"><br />
+                <label for="">adresse:</label><input type="adresse" class="form-control" name="" id=""
+                    [(ngModel)]="address"><br />
+            </Form>
+        </div>
+    </div>
+
+
+    <h2 class="text-center text-success"> Partie 3 challenge 2 </h2>
+    <fieldset *ngFor="let person of people" class="form-group border p-3">
+        <legend class="w-auto px-2">{{person.titre}}</legend>
+        <h4>{{person.auteur}} </h4>
+        <h5>{{person.date}} </h5>
+        <p> {{person.contenu}}</p>
+    </fieldset>
+
+</div>
